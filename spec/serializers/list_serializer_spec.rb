@@ -13,6 +13,7 @@ RSpec.describe ListSerializer, :type => :serializer do
 
     it 'checks that the JSON response returns expected' do
       response_attributes = list.attributes.slice *%w(
+        user_id
         id
         name
         permissions

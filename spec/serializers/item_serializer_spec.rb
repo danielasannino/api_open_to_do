@@ -13,7 +13,7 @@ RSpec.describe ItemSerializer, :type => :serializer do
 
     it 'checks that the JSON response returns expected' do
       response_attributes = item.attributes.slice *%w(
-        list
+        list_id
         id
         description
         compeleted
