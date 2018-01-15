@@ -7,6 +7,8 @@ class Api::ItemsController < ApiController
 
     if item.save
       render json: item, status: 201
+    else
+      render json: {}, status: 422
     end
   end
 end

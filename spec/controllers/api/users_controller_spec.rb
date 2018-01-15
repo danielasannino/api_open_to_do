@@ -38,4 +38,17 @@ RSpec.describe Api::UsersController, type: :controller do
       assert_equal 422, response.status
     end
   end
+
+  describe "Users#destroy" do
+
+    before do
+      @user = create(:user)
+    end
+
+    it "deletes existing user" do
+      allow(controller).to receive(:authenticated?)
+      delete :destroy, { id: @user.id }
+      assert_equal 204, response.status
+    end
+  end
 end
