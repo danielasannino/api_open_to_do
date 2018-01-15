@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe UserSerializer, :type => :serializer do
+RSpec.describe UserSerializer, type: :serializer do
 
   describe 'User Representation' do
     let(:user) { @user = create(:user) }
