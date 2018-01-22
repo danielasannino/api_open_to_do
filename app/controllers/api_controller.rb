@@ -1,5 +1,6 @@
 class ApiController < ApplicationController
-    skip_before_action :verify_authenticity_token
+    include ActionController::HttpAuthentication::Basic::ControllerMethods
+    skip_before_action :verify_authenticity_token, raise: false
     attr_reader :current_user
 
     private
